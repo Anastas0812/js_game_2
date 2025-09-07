@@ -92,3 +92,24 @@ testCases.forEach(({ Class, name, type, expectedAttack, expectedDefence }) => {
     expect(character.defence).toBe(expectedDefence);
   });
 });
+
+test('levelUp здоровье > 0', () => {
+  const Gendalf = new Magician('Gendalf', 'Magician', 30, 4, 10, 40);
+  Gendalf.levelUp();
+  expect(Gendalf.health).toBe(100);
+  expect(Gendalf.level).toBe(5);
+  expect(Gendalf.attack).toBe(12);
+  expect(Gendalf.defence).toBe(48);
+});
+
+test('levelUp здоровье < 0', () => {
+  expect(() => {
+    new Magician('Gendalf', 'Magician', 0, 4, 10, 40).levelUp();
+  }).toThrow('Персонаж мёртв. Повысить level невозможно');
+});
+
+test('damage здоровье > 0', () => {
+  const Dambldor = new Magician('Dambldor', 'Magician', 30, 4, 10, 40);
+  Dambldor.damage(10);
+  expect(Dambldor.health).toBe(24);
+});

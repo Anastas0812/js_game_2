@@ -111,7 +111,7 @@ const Azog = new Undead('Azog', 'Undead');
 const Shon = new Zombie('Shon', 'Zombie');
 
 // console.log(Deadshot.levelUp());
-console.log(Deadshot.damage(10));
+// console.log(Deadshot.damage(10));
 // console.log(Deadshot.level);
 // console.log(Deadshot.health);
 // console.log(Deadshot.attack);
