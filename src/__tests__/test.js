@@ -1,4 +1,10 @@
-import { Character, Bowman, Swordsman, Magician, Daemon, Undead, Zombie } from '../index.js';
+import { Character } from '../index.js';
+import Bowman from '../Bowman.js';
+import Daemon from '../Daemon.js';
+import Magician from '../Magician.js';
+import Swordsman from '../Swordsman.js';
+import Undead from '../Undead.js';
+import Zombie from '../Zombie.js';
 
 test('проверка на строку у name', () => {
   expect(() => {
